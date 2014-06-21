@@ -1,0 +1,255 @@
+<html>
+<head>
+
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/animate.css">
+
+	<title>Duck Hunt</title>
+
+	<style>
+
+		#splashImage {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			height: 100%;
+			width: 100%;
+		}
+		img {
+		   	left: 14px;
+		   	top: -70px;
+		    clear: bottom;
+		    position: absolute;
+		    width: 100px;
+		    height: 100px;
+		}
+		body {
+			background: url('/img/duck_hunt_background_04.png') no-repeat center;
+			background-size: 100%;
+			cursor: pointer;
+    		cursor: url(/img/crosshairs_cursor_02.gif) 2 2, pointer;
+		}
+		div {
+			position: relative;
+		}		
+		div.hole {
+		    /*border: 2px solid black;
+		    background-color: #fff;
+			opacity:0.3;
+		    border-radius: 50%;*/
+		    width: 200px; height: 90px;
+		    margin: 2px;
+		    float: left;
+		    left: 30px;
+		}
+		#startButton {
+			position: absolute;
+			left: 1100px;
+			top: 78px;
+		}
+		#duckHuntLogo {
+			color: #021619;
+			/*position: absolute;*/
+			opacity:0.9;
+			left: 200px;
+			top: 30px;
+			height: 120px;
+			width: 650px;
+			pointer: cursor;
+		}
+		#container {
+			/*border: 1px solid black;*/
+			top: 0px;
+			left: 25px;
+			display: none;
+		}
+		#menu {
+/*			background-color: #10A2BF;
+*/			opacity:0.9;
+			position: relative;
+			float: top;
+			height: 29.8%;
+			width: 100%;
+		}
+		#counter {
+			color: #fff;
+			text-decoration: bold;
+			position: absolute;
+			top: 30px;
+			left: 1100px;
+			font-size: 20px;
+		}
+		#timer {
+			color: #fff;
+			text-decoration: bold;
+			position: absolute;
+			top: 50px;
+			left: 1100px;
+			font-size: 20px;
+		}
+		.mole {
+			display:none;
+			pointer: mouse;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="siteContainer">
+	<div id="splashscreen">
+	    <img href="#" class="enter_link" id="splashImage" src="/img/duck_hunt_intro_screen.jpg" />
+	    <audio id="my_audio" src="sounds/duck_hunt_start_game.mp3"></audio>
+	</div>	
+	<div id="container">
+		<div id="menu">
+			<button class="btn" id="startButton">Start</button>
+			<div id="counter">KILL COUNT: 0</div>
+			<div id="timer">TIME LIMIT: </div>
+		</div>
+
+		<div class="hole" id="1">
+			<img class="mole" id="mole1" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="2">
+			<img class="mole" id="mole2" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="3">
+			<img class="mole" id="mole3" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="4">
+			<img class="mole" id="mole4" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="5">
+			<img class="mole" id="mole5" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="6">
+			<img class="mole" id="mole6" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="7">
+			<img class="mole" id="mole7" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="8">
+			<img class="mole" id="mole8" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="9">
+			<img class="mole" id="mole9" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="10">
+			<img class="mole" id="mole10" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="11">
+			<img class="mole" id="mole11" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="12">
+			<img class="mole" id="mole12" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="1">
+			<img class="mole" id="mole1" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="2">
+			<img class="mole" id="mole2" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="3">
+			<img class="mole" id="mole3" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="4">
+			<img class="mole" id="mole4" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="5">
+			<img class="mole" id="mole5" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="6">
+			<img class="mole" id="mole6" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="7">
+			<img class="mole" id="mole7" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="8">
+			<img class="mole" id="mole8" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="9">
+			<img class="mole" id="mole9" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="10">
+			<img class="mole" id="mole10" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="11">
+			<img class="mole" id="mole11" src="/img/duck_alive_01.png">
+		</div>
+		<div class="hole" id="12">
+			<img class="mole" id="mole12" src="/img/duck_alive_01.png">
+		</div>
+	</div>
+</div>
+    <script src="/js/jquery.js"></script>
+
+  	<script>
+	  	$(document).ready(function() {
+	    	$("#my_audio").get(0).play();
+		});
+		 $('.enter_link').click(function() { 
+		 	//startGameAudio.play();
+			$(this).parent().fadeOut(500);
+			$('#container').fadeIn();
+		});
+
+  		// VARIABLES
+  		var time = 30;
+		var count = 0;
+		var gameInterval;
+		var gameTime;
+		var hole = $('.hole');
+		var randomBox = 0;
+		var shotgunAudio = new Audio('/sounds/blast_02.mp3');
+		var endOfRound = new Audio('sounds/win.mp3');
+		
+		console.log(hole);
+
+		// THIS IS MY START BUTTON. CALLS BOTH FUNCTIONS BELOW.
+		$('#menu').children().click(function(){
+			gameInterval = setInterval(action, 1500);
+			gameTime = setInterval(countdown, 1000);
+		});
+
+		$('.hole').children().click(function(){
+			shotgunAudio.play();
+		});
+
+		function getRandomInt(min, max) {
+		  	return Math.floor(Math.random() * (max - min + 1)) + min;
+		};
+
+		// THIS IS MY ACTION FUNCTION: WHEN START BUTTON IS PRESSED.
+		var action = function(){
+			var rand = getRandomInt(1, 24);
+			var moles = $('.mole');
+			var currentMole = moles[rand - 1];
+			$(currentMole).fadeIn().delay(500).fadeOut();			
+		};
+
+		// THIS IS MY COUNTDOWN FUNCTION
+		var countdown = function(){
+			if (time >= 0) {
+				$('#timer').html("SEC LEFT: " + (time--));
+			} else {
+				clearInterval(gameInterval);
+				
+				$('#timer').html("GAME OVER");
+				endOfRound.play();
+			}
+		};
+
+		// THIS IS MY SCORE COUNTER
+		$(".hole").children().click(function() {
+    		count++;
+    		$("#counter").html("STRIKES: " + count);
+		});
+
+  	</script>
+
+
+</body>
+</html>
